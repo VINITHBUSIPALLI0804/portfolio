@@ -96,7 +96,7 @@ nav {
   background-position: center;
   border-radius: 30px;
   padding: 40px 20px;
-  padding:18%;
+  padding:18%; /* This will be overridden for mobile */
   padding-top: 20px;
 }
 .v {
@@ -198,7 +198,7 @@ nav {
   border-radius: 30px;
   padding: 40px 20px;
   text-align: center;
-  padding:15%;
+  padding:15%; /* This will be overridden for mobile */
   padding-top: 40px;
 }
 .project-controls{
@@ -264,8 +264,8 @@ nav {
   background-position: center;
   border-radius: 30px;
   padding: 40px 20px;
-  padding-left: 15%;
-  padding-right: 15%;
+  padding-left: 15%; /* This will be overridden for mobile */
+  padding-right: 15%; /* This will be overridden for mobile */
 }
 .contacts {
   display: flex;
@@ -320,25 +320,44 @@ nav {
   color: white;
   text-decoration: none;
 }
+
+/* ======================================================= */
+/* MOBILE FIXES START HERE */
+/* ======================================================= */
+
 @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
+  /* GLOBAL LAYOUT FIXES: Reduce excessive percentage padding */
+  .about, .skills, .projects, .contact {
+    padding: 40px 20px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
+  /* NAVIGATION BAR FIXES: Make it compact and horizontal */
+  nav {
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px; /* Reduced vertical padding */
+  }
+
+  .h11 {
+    font-size: 18px; 
+  }
+
+  /* Note: For a true mobile experience, you might want to hide .menu and use a hamburger icon */
+  /* For now, keeping it visible but allowing wrap/stacking if needed */
   .menu {
+    flex-direction: row; 
     flex-wrap: wrap;
     gap: 10px;
+    justify-content: flex-end;
   }
 
-  .skills1, .project, .contacts, .details {
-    flex-direction: column;
-    align-items: center;
-  }
-
+  /* ABOUT SECTION */
   .img0 {
-    width: 180px;
-    height: 180px;
+    width: 160px; /* Smaller image */
+    height: 160px;
   }
 
   .name {
@@ -348,13 +367,49 @@ nav {
   .role {
     font-size: 1rem;
   }
+  
+  .v {
+      font-size: 1.8rem;
+  }
+
+  /* PROJECT SECTION FIX: Enable Horizontal Scroll */
+  .project {
+    display: flex;
+    flex-wrap: nowrap; /* CRITICAL: Prevents stacking vertically */
+    overflow-x: auto; /* CRITICAL: Enables horizontal scrolling */
+    scroll-snap-type: x mandatory; 
+    justify-content: flex-start; 
+    padding-bottom: 20px;
+  }
+
+  .p1 {
+    /* Set fixed width for horizontal scrolling */
+    min-width: 80%; /* Takes up most of the screen width */
+    max-width: 80%;
+    flex-shrink: 0; /* Prevents cards from shrinking */
+    margin-right: 15px; /* Spacing between cards */
+  }
+
+  /* CONTACT SECTION */
+  .contacts, .details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .send {
+    max-width: 100%; 
+    width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
+  /* NAVIGATION BAR (If you want to hide the menu completely on very small screens) */
+  /* nav .menu { display: none; } */
+
   .name {
     font-size: 1.6rem;
   }
-  
+
   .role {
     font-size: 0.9rem;
   }
@@ -366,7 +421,18 @@ nav {
   .v {
     font-size: 1.5rem;
   }
+  
+  /* Project Card width on smallest screens */
+  .project .p1 {
+    min-width: 90%; 
+    max-width: 90%;
+  }
 }
+
+/* ======================================================= */
+/* END MOBILE FIXES */
+/* ======================================================= */
+
 .small{
     font-size: 70%;
     padding-bottom: 30px;
