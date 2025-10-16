@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
+  <meta name="description" content="Vinith Busipalli — Game Developer & Multidisciplinary creative. Projects in Unity/Unreal, VFX, AR lenses, full‑stack.">
+  <meta property="og:title" content="Vinith Busipalli — Game Developer Portfolio">
+  <meta property="og:description" content="Gamedev projects, VFX, AR lenses, and engineering. Available for internship.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="./IMAGES/vinith.png">
+  <link rel="icon" href="./IMAGES/vinith.png">
   <title>VINITH BUSIPALLI</title>
 </head>
 <body>
@@ -13,6 +19,7 @@
     <h1 class="h11">VINITH BUSIPALLI</h1>
     <ul class="menu">
       <li><a href="#about">ABOUT</a></li>
+      <li><a href="#achievements">ACHIEVEMENTS</a></li>
       <li><a href="#skills">SKILLS</a></li>
       <li><a href="#projects">PROJECTS</a></li>
       <li><a href="#contact">CONTACT</a></li>
@@ -23,6 +30,16 @@
   <section class="about" id="about">
     <img class="img0" src="./IMAGES/vinith.png" alt="Vinith Busipalli">
     <p class="name">VINITH BUSIPALLI</p>
+    <p class="tag">Building immersive, high‑performance game experiences.</p>
+    <div class="cta">
+      <a class="btn primary" href="#projects">View Showreel</a>
+      <a class="btn" href="./resume.pdf" target="_blank">Download Resume</a>
+    </div>
+    <div class="stats">
+      <div><strong>3+</strong><span>Years Creating</span></div>
+      <div><strong>10+</strong><span>Projects</span></div>
+      <div><strong>15+</strong><span>Engines/Tools</span></div>
+    </div>
     <p class="role">Graphic Designer | Full Stack Developer | Video Editor | Game Developer</p>
     <p class="infom">
       I’m a multidisciplinary creative—Graphic Designer, Full Stack Developer, Video Editor, and Game Developer.<br>
@@ -35,45 +52,106 @@
       <img onclick="window.open('https://x.com/VINITHB1949111','_blank')" class="mm" src="./IMAGES/x.png" alt="Twitter">
     </div>
   </section>
+  <section class="achievements" id="achievements">
+    <h1 class="v">ACHIEVEMENTS</h1>
+    <div class="ach-list">
+      <div class="ach">Sandbox Finalist</div>
+      <div class="ach">Campus Hackathon Winner</div>
+      <div class="ach">AR Lens Featured</div>
+      <div class="ach">Speaker @ Tech Fest</div>
+    </div>
+  </section>
+
+  <section class="timeline" id="timeline">
+    <h1 class="v">JOURNEY</h1>
+    <ul class="tl">
+      <li><span>2025</span> Built AR Lens and Procedural VFX prototypes</li>
+      <li><span>2024</span> Developed immersive game environments</li>
+      <li><span>2023</span> Box Office Prediction site using R / Unreal Engine</li>
+      <li><span>2022</span> Animation / Simple Python Chatbot</li>
+      <li><span>2021</span> Designing and Video Editing</li>
+    </ul>
+  </section>
 
   <!-- SKILLS -->
   <section class="skills" id="skills">
     <h1 class="v">SKILLS & TECHNOLOGIES</h1>
     <div class="skills1">
-      <div class="sc gd">
-        <img class="j" src="./IMAGES/image1.png" alt="Graphic Design">
-        <p>Graphic Designing</p>
-        <img class="j" src="./IMAGES/blender.png">
-        <img class="j" src="./IMAGES/maya.png">
-        <img class="j" src="./IMAGES/solid.png">
-        <img class="j" src="./IMAGES/f.png">
+      <div class="skills-controls">
+        <button class="proj-arrow" id="skillsPrev" aria-label="Previous">◄</button>
+        <button class="proj-arrow" id="skillsNext" aria-label="Next">►</button>
       </div>
-      <div class="sc ve">
-        <img class="j" src="./IMAGES/image.png" alt="Video Editing">
-        <p>Image & Video Editing</p>
-        <img class="j" src="./IMAGES/pr.png">
-        <img class="j" src="./IMAGES/ae.png">
-        <img class="j" src="./IMAGES/ps.png">
-      </div>
-      <div class="sc gad">
-        <img class="j" src="./IMAGES/image2.png" alt="Game Development">
-        <p>Game Development</p>
-        <img class="j" src="./IMAGES/blender.png">
-        <img class="j" src="./IMAGES/unity.png">
-        <img class="j" src="./IMAGES/unreal.png">
+      <!-- marquee wrapper: duplicate the 3 skill cards to create a seamless loop -->
+      <div class="marquee" id="skillsRow" aria-hidden="false">
+        <div class="marquee__inner">
+          <div class="sc gd">
+            <img class="j" src="./IMAGES/image1.png" alt="Graphic Design">
+            <p>Graphic Designing</p>
+            <img class="j" src="./IMAGES/blender.png">
+            <img class="j" src="./IMAGES/maya.png">
+            <img class="j" src="./IMAGES/solid.png">
+            <img class="j" src="./IMAGES/f.png">
+          </div>
+          <div class="sc ve">
+            <img class="j" src="./IMAGES/image.png" alt="Video Editing">
+            <p>Image & Video Editing</p>
+            <img class="j" src="./IMAGES/pr.png">
+            <img class="j" src="./IMAGES/ae.png">
+            <img class="j" src="./IMAGES/ps.png">
+          </div>
+          <div class="sc gad">
+            <img class="j" src="./IMAGES/image2.png" alt="Game Development">
+            <p>Development</p>
+            <img class="j" src="./IMAGES/blender.png">
+            <img class="j" src="./IMAGES/unity.png">
+            <img class="j" src="./IMAGES/unreal.png">
+            <img class="j" src="./IMAGES/snap.png">
+          </div>
+          <div class="sc">
+            <img class="j" src="./IMAGES/html.png" alt="HTML">
+            <p>Frontend</p>
+            <img class="j" src="./IMAGES/css.png" alt="CSS">
+            <img class="j" src="./IMAGES/js.png" alt="JS">
+            <img class="j" src="./IMAGES/git.png" alt="Git">
+          </div>
+          <div class="sc">
+            <img class="j" src="./IMAGES/mongo.png" alt="MongoDB">
+            <p>Backend & DB</p>
+            <img class="j" src="./IMAGES/sql.png" alt="SQL">
+            <img class="j" src="./IMAGES/java.png" alt="Java">
+            <img class="j" src="./IMAGES/pyhton.png" alt="Python">
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="code1">
       <h3>CODING SKILLS</h3>
-      <div class="code">
-        <img class="s" src="./IMAGES/java.png" alt="Java">
-        <img class="s" src="./IMAGES/c++.png" alt="C++">
-        <img class="s" src="./IMAGES/c.png" alt="C">
-        <img class="s" src="./IMAGES/pyhton.png" alt="Python">
-        <img class="s" src="./IMAGES/r.png" alt="R">
-        <img class="s" src="./IMAGES/sql.png" alt="SQL">
-        <img class="s" src="./IMAGES/mongo.png" alt="MongoDB">
+      <div class="code code-marquee">
+        <div class="marquee__inner code-inner">
+          <img class="s" src="./IMAGES/java.png" alt="Java">
+          <img class="s" src="./IMAGES/c++.png" alt="C++">
+          <img class="s" src="./IMAGES/c.png" alt="C">
+          <img class="s" src="./IMAGES/pyhton.png" alt="Python">
+          <img class="s" src="./IMAGES/r.png" alt="R">
+          <img class="s" src="./IMAGES/sql.png" alt="SQL">
+          <img class="s" src="./IMAGES/mongo.png" alt="MongoDB">
+          <img class="s" src="./IMAGES/html.png" alt="HTML">
+          <img class="s" src="./IMAGES/css.png" alt="CSS">
+          <img class="s" src="./IMAGES/js.png" alt="JS">
+
+          <!-- duplicate for seamless loop -->
+          <img class="s" src="./IMAGES/java.png" alt="Java">
+          <img class="s" src="./IMAGES/c++.png" alt="C++">
+          <img class="s" src="./IMAGES/c.png" alt="C">
+          <img class="s" src="./IMAGES/pyhton.png" alt="Python">
+          <img class="s" src="./IMAGES/r.png" alt="R">
+          <img class="s" src="./IMAGES/sql.png" alt="SQL">
+          <img class="s" src="./IMAGES/mongo.png" alt="MongoDB">
+          <img class="s" src="./IMAGES/html.png" alt="HTML">
+          <img class="s" src="./IMAGES/css.png" alt="CSS">
+          <img class="s" src="./IMAGES/js.png" alt="JS">
+        </div>
       </div>
     </div>
   </section>
@@ -81,16 +159,69 @@
   <!-- PROJECTS -->
   <section class="projects" id="projects">
     <h1 class="v">PROJECTS</h1>
-    <div class="project">
+    <div class="project-controls">
+      <button class="proj-arrow" id="projPrev" aria-label="Previous">◄</button>
+      <button class="proj-arrow" id="projNext" aria-label="Next">►</button>
+    </div>
+    <div class="project" id="projectRow">
+      
       <div class="p1">
-        <img class="box" src="./IMAGES/box office.jpg" alt="Box Office">
-        <p><strong>BOX OFFICE PREDICTION</strong></p>
-        <p class="pt">Developed a movie box-office prediction website using R, integrating TMDB for movie details and leveraging budget, director, and actor history to forecast collections.</p>
+        <img class="box lb" src="./IMAGES/ludo.png" alt="Ludo Game (Android)">
+        <p><strong>LUDO GAME (Android)</strong></p>
+        <div class="proj-badges"><span>Android Studio</span><span>Java</span><span>2025</span></div>
+        <p class="pt">Turn-based Ludo with local multiplayer, dice logic, and save states.</p>
+        <a class="case-btn" href="#" target="_blank">Case Study</a>
       </div>
       <div class="p1">
-        <img class="box" src="./IMAGES/chatbot.jpg" alt="Chatbot">
+        <img class="box lb" src="./IMAGES/timey.png" alt="TIMEY GAMES">
+        <p><strong>TIMEY GAMES</strong></p>
+        <div class="proj-badges"><span>GitHub</span><span>Mini Games</span><span>2021–2025</span></div></p>
+        <p class="pt">Collection of small games and experiments. Check out the repo at <a href="https://github.com/VINITHBUSIPALLI0804/timey_games" target="_blank">timey games/a>.</p>
+        <a class="case-btn" href="#" target="_blank">GitHub Repo</a>
+      </div>
+      <div class="p1">
+        <div class="media-wrap">
+          <video class="box lb" src="./IMAGES/demo2.mp4" poster="./IMAGES/vfx.jpg" preload="metadata" muted></video>
+          <button type="button" class="play-btn" data-target="video">Play</button>
+        </div>
+        <p><strong>Animation and VFX(1)</strong></p>
+        <div class="proj-badges"><span>Blender</span><span>Shader Graph</span><span>2021-2025</span></div>
+        <p class="pt">Shader-based particles and GPU-driven animations using Blender.</p>
+        <a class="case-btn" href="#" target="_blank">Case Study</a>
+      </div>
+       <div class="p1">
+        <div class="media-wrap">
+          <video class="box lb" src="./IMAGES/demo3.mp4" poster="./IMAGES/vfx.jpg" preload="metadata" muted></video>
+          <button type="button" class="play-btn" data-target="video">Play</button>
+        </div>
+        <p><strong>Animation and VFX(2)</strong></p>
+        <div class="proj-badges"><span>Unreal Engine</span><span>Shader Graph</span><span>2021-2025</span></div>
+        <p class="pt">Shader-based particles and GPU-driven animations using Unreal Engine</p>
+        <a class="case-btn" href="#" target="_blank">Case Study</a>
+      </div>
+      <div class="p1">
+        <div class="media-wrap">
+          <video class="box lb" src="./IMAGES/demo1.mp4" poster="./IMAGES/snap.png" preload="metadata" muted></video>
+          <button type="button" class="play-btn" data-target="video">Play</button>
+        </div>
+        <p><strong>SNAP LENS</strong></p>
+        <div class="proj-badges"><span>Lens Studio</span><span>AR</span><span>2025</span></div>
+        <p class="pt">Interactive AR lens using Lens Studio with real-time effects and event triggers optimized for engagement.</p>
+        <a class="case-btn" href="#" target="_blank">Case Study</a>
+      </div>
+      <div class="p1">
+        <img class="box lb" src="./IMAGES/box office.jpg" alt="Box Office">
+        <p><strong>BOX OFFICE PREDICTION</strong></p>
+        <div class="proj-badges"><span>R</span><span>TMDB</span><span>2023</span></div>
+        <p class="pt">Developed a movie box-office prediction website using R, integrating TMDB for movie details and leveraging budget, director, and actor history to forecast collections.</p>
+        <a class="case-btn" href="#" target="_blank">Case Study</a>
+      </div>
+      <div class="p1">
+        <img class="box lb" src="./IMAGES/chatbot.jpg" alt="Chatbot">
         <p><strong>SIMPLE CHATBOT</strong></p>
+        <div class="proj-badges"><span>Python</span><span>CLI</span><span>2022</span></div>
         <p class="pt">A simple rule-based chatbot in Python that responds to greetings, farewells, and basic queries. It loads responses from a JSON file and provides default replies for unknown queries.</p>
+        <a class="case-btn" href="#" target="_blank">Case Study</a>
       </div>
     </div>
   </section>
@@ -110,14 +241,14 @@
         <h4>Send a message</h4>
         <form id="contactForm">
         <p>Name</p>
-        <input type="text" placeholder="Your Name">
+        <input id="name" type="text" placeholder="Your Name">
         <p>Email</p>
-        <input type="text" placeholder="Your Email">
+        <input id="email" type="email" placeholder="Your Email">
         <p>Subject</p>
-        <input type="text" placeholder="Subject">
+        <input id="subject" type="text" placeholder="Subject">
         <p>Message</p>
-        <input type="text" placeholder="Your Message">
-        <button type="submit" id="sendbtn">
+        <input id="message" type="text" placeholder="Your Message">
+        <button type="submit" id="sendBtn">
           <img class="j1" src="./IMAGES/send.png" alt="Send"> Send Message
         </button>
         </form>
@@ -137,15 +268,24 @@
     <div>
       <h1>QUICK LINKS</h1>
       <li><a href="#about">ABOUT</a></li>
+      <li><a href="#achievements">ACHIEVEMENTS</a></li>
       <li><a href="#skills">SKILLS</a></li>
       <li><a href="#projects">PROJECTS</a></li>
       <li><a href="#contact">CONTACT</a></li>
     </div>
     <div>
       <h1>SERVICES</h1>
-      <p>Graphic Designing<br>Video Editing<br>Game Development<br>Tech Consulting</p>
+      <p>Graphic Designing<br>Video Editing<br>Game Development<br>Tech Consulting<br>Lens Creation</p>
     </div>
   </footer>
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lb-backdrop" id="lbBackdrop"></div>
+    <div class="lb-content">
+      <button class="lb-close" id="lbClose" aria-label="Close">×</button>
+      <img id="lbImg" alt="Preview">
+    </div>
+  </div>
+
   <script>
 document.getElementById("contactForm").addEventListener("submit", async function(e) {
   e.preventDefault();
@@ -180,6 +320,159 @@ document.getElementById("contactForm").addEventListener("submit", async function
 
   btn.innerHTML = '<img src="./IMAGES/send.png" alt="Send" /> Send Message';
 });
+// project arrows, keyboard, pagination
+(function(){
+  const row = document.getElementById('projectRow');
+  const prev = document.getElementById('projPrev');
+  const next = document.getElementById('projNext');
+  const dots = document.getElementById('projDots');
+  if(!row || !prev || !next) return;
+  const getCardWidth = ()=>{
+    const card = row.querySelector('.p1');
+    if(!card) return 320;
+    const style = getComputedStyle(card);
+    const w = card.getBoundingClientRect().width;
+    const mr = parseFloat(style.marginRight || '20');
+    return w + mr;
+  };
+  const scrollByCard = (dir)=> row.scrollBy({ left: dir * getCardWidth(), behavior: 'smooth' });
+  prev.addEventListener('click', ()=> scrollByCard(-1));
+  next.addEventListener('click', ()=> scrollByCard(1));
+  window.addEventListener('keydown', (e)=>{
+    if(e.key === 'ArrowLeft') scrollByCard(-1);
+    if(e.key === 'ArrowRight') scrollByCard(1);
+  });
+  if(dots){
+    const cards = Array.from(row.querySelectorAll('.p1'));
+    dots.className = 'pagination';
+    dots.setAttribute('aria-label','Project pagination');
+    dots.innerHTML = '';
+    cards.forEach((_, i)=>{
+      const b = document.createElement('button');
+      b.className = 'dot';
+      b.setAttribute('aria-label', 'Go to project ' + (i+1));
+      b.addEventListener('click', ()=> row.scrollTo({ left: i * getCardWidth(), behavior: 'smooth' }));
+      dots.appendChild(b);
+    });
+    const updateDots = ()=>{
+      const w = getCardWidth();
+      const idx = Math.round(row.scrollLeft / w);
+      Array.from(dots.children).forEach((d, i)=> d.classList.toggle('active', i===idx));
+    };
+    updateDots();
+    row.addEventListener('scroll', ()=> requestAnimationFrame(updateDots));
+  }
+})();
+
+// lightbox (supports images and videos)
+(function(){
+  const lb = document.getElementById('lightbox');
+  const img = document.getElementById('lbImg');
+  const closeBtn = document.getElementById('lbClose');
+  const backdrop = document.getElementById('lbBackdrop');
+  if(!lb) return;
+  let videoEl = null;
+  const open = (el)=>{
+    const nodeName = el.nodeName.toLowerCase();
+    if(nodeName === 'video'){
+      // replace image with video in lightbox
+      if(!videoEl){
+        videoEl = document.createElement('video');
+        videoEl.controls = true;
+        videoEl.style.maxWidth = '90vw';
+        videoEl.style.maxHeight = '85vh';
+        img.parentNode.replaceChild(videoEl, img);
+      }
+      videoEl.src = el.getAttribute('src');
+      videoEl.poster = el.getAttribute('poster') || '';
+      videoEl.currentTime = 0;
+      videoEl.play().catch(()=>{});
+    } else {
+      // ensure image exists
+      if(videoEl){
+        const newImg = document.createElement('img');
+        newImg.id = 'lbImg';
+        newImg.alt = 'Preview';
+        videoEl.parentNode.replaceChild(newImg, videoEl);
+        videoEl = null;
+      }
+      const imageNode = document.getElementById('lbImg');
+      imageNode.src = el.getAttribute('src');
+    }
+    lb.setAttribute('aria-hidden','false');
+    lb.classList.add('show');
+  };
+  const close = ()=>{
+    lb.classList.remove('show');
+    lb.setAttribute('aria-hidden','true');
+    const imageNode = document.getElementById('lbImg');
+    if(videoEl){ videoEl.pause(); videoEl.src = ''; }
+    if(imageNode){ imageNode.src = ''; }
+  };
+  // click on media opens lightbox
+  document.querySelectorAll('.lb').forEach(el=> el.addEventListener('click', ()=> open(el)));
+  // play buttons under videos
+  document.querySelectorAll('.play-btn').forEach(btn=>{
+    btn.addEventListener('click', (e)=>{
+      const container = e.currentTarget.closest('.media-wrap');
+      if(!container) return;
+      const vid = container.querySelector('video.lb');
+      if(vid) open(vid);
+    });
+  });
+  closeBtn.addEventListener('click', close);
+  backdrop.addEventListener('click', close);
+})();
+
+// contact UX validation
+(function(){
+  const form = document.getElementById('contactForm');
+  if(!form) return;
+  form.addEventListener('submit', function(){
+    const btn = document.getElementById('sendBtn');
+    if(!btn) return;
+    btn.disabled = true;
+    btn.style.opacity = '0.7';
+    setTimeout(()=>{ btn.disabled = false; btn.style.opacity = '1'; }, 4000);
+  });
+})();
+// project arrows scroll logic
+(function(){
+  const row = document.getElementById('projectRow');
+  const prev = document.getElementById('projPrev');
+  const next = document.getElementById('projNext');
+  if(!row || !prev || !next) return;
+  const getCardWidth = ()=>{
+    const card = row.querySelector('.p1');
+    if(!card) return 320;
+    const style = getComputedStyle(card);
+    const w = card.getBoundingClientRect().width;
+    const mr = parseFloat(style.marginRight || '20');
+    return w + mr;
+  };
+  const scrollByCard = (dir)=>{
+    row.scrollBy({ left: dir * getCardWidth(), behavior: 'smooth' });
+  };
+  prev.addEventListener('click', ()=> scrollByCard(-1));
+  next.addEventListener('click', ()=> scrollByCard(1));
+})();
+
+// skills arrows scroll logic
+(function(){
+  const wrap = document.getElementById('skillsRow');
+  const prev = document.getElementById('skillsPrev');
+  const next = document.getElementById('skillsNext');
+  if(!wrap || !prev || !next) return;
+  const getCardWidth = ()=>{
+    const card = wrap.querySelector('.sc');
+    if(!card) return 260;
+    const w = card.getBoundingClientRect().width;
+    return w + 20; // approximate gap
+  };
+  const scrollByCard = (dir)=> wrap.scrollBy({ left: dir * getCardWidth(), behavior: 'smooth' });
+  prev.addEventListener('click', ()=> scrollByCard(-1));
+  next.addEventListener('click', ()=> scrollByCard(1));
+})();
 </script>
 </body>
 </html>
