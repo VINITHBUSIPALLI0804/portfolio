@@ -15,7 +15,7 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
+  padding: 15px 20px; /* Desktop size */
   background-color: #D38C39;
   border: 1px solid rgb(20, 27, 102);
   border-radius: 12px;
@@ -96,7 +96,7 @@ nav {
   background-position: center;
   border-radius: 30px;
   padding: 40px 20px;
-  padding:18%; /* This will be overridden for mobile */
+  padding:18%; /* Overridden for mobile */
   padding-top: 20px;
 }
 .v {
@@ -114,7 +114,7 @@ nav {
 .marquee{
   width: 100%;
   overflow: hidden;
-  perspective: 800px; /* create depth */
+  perspective: 800px; 
 }
 #skillsRow{ overflow-x: auto; }
 .marquee__inner{
@@ -122,7 +122,7 @@ nav {
   gap: 20px;
   align-items: center;
   transform-style: preserve-3d;
-  width: max-content; /* prevent wrapping and allow seamless translate */
+  width: max-content; 
 }
 .marquee__inner:hover{
   animation-play-state: paused;
@@ -136,13 +136,12 @@ nav {
   100% { transform: translateX(-50%) translateZ(-60px) rotateX(2deg); }
 }
 
-/* simpler, gap-free horizontal scroll specifically for coding icons */
 @keyframes marquee-x{
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 .sc {
-  flex: 0 0 250px; /* fixed width prevents size shifts during marquee */
+  flex: 0 0 250px; 
   text-align: center;
   background-color: rgba(255,255,255,0.9);
   color: black;
@@ -174,22 +173,21 @@ nav {
   object-fit: contain;
 }
 
-/* make the code icons feel farther and continuously scroll */
 .code-marquee{
   overflow: hidden;
 }
 .code-inner{
   display: flex;
-  gap: 0; /* manage spacing with per-item margin to keep duplicated seam identical */
+  gap: 0; 
   align-items: center;
   animation: marquee-x 12s linear infinite;
-  width: max-content; /* prevent gaps when translating */
+  width: max-content; 
   will-change: transform;
 }
 .code-inner:hover{ animation-play-state: paused; }
 .code-inner > * {
-  flex: 0 0 auto; /* prevent shrinking */
-  margin-right: 20px; /* consistent spacing between items and between copies */
+  flex: 0 0 auto; 
+  margin-right: 20px; 
 }
 .projects {
   background-image: url(./IMAGES/23.jpg);
@@ -198,7 +196,7 @@ nav {
   border-radius: 30px;
   padding: 40px 20px;
   text-align: center;
-  padding:15%; /* This will be overridden for mobile */
+  padding:15%; /* Overridden for mobile */
   padding-top: 40px;
 }
 .project-controls{
@@ -264,8 +262,8 @@ nav {
   background-position: center;
   border-radius: 30px;
   padding: 40px 20px;
-  padding-left: 15%; /* This will be overridden for mobile */
-  padding-right: 15%; /* This will be overridden for mobile */
+  padding-left: 15%; /* Overridden for mobile */
+  padding-right: 15%; /* Overridden for mobile */
 }
 .contacts {
   display: flex;
@@ -322,7 +320,7 @@ nav {
 }
 
 /* ======================================================= */
-/* MOBILE FIXES START HERE */
+/* MOBILE FIXES START HERE (768px and below) */
 /* ======================================================= */
 
 @media (max-width: 768px) {
@@ -333,30 +331,31 @@ nav {
     padding-right: 20px;
   }
 
-  /* NAVIGATION BAR FIXES: Make it compact and horizontal */
+  /* 1. NAVIGATION BAR FIXES: Make it compact */
   nav {
     flex-direction: row; 
     justify-content: space-between;
     align-items: center;
-    padding: 10px 15px; /* Reduced vertical padding */
+    padding: 8px 15px; /* Compact height */
   }
 
   .h11 {
-    font-size: 18px; 
+    font-size: 16px; 
   }
 
-  /* Note: For a true mobile experience, you might want to hide .menu and use a hamburger icon */
-  /* For now, keeping it visible but allowing wrap/stacking if needed */
   .menu {
     flex-direction: row; 
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px; 
     justify-content: flex-end;
+  }
+  .menu a {
+      font-size: 0.8rem; /* Smaller text */
   }
 
   /* ABOUT SECTION */
   .img0 {
-    width: 160px; /* Smaller image */
+    width: 160px; 
     height: 160px;
   }
 
@@ -372,40 +371,54 @@ nav {
       font-size: 1.8rem;
   }
 
-  /* PROJECT SECTION FIX: Enable Horizontal Scroll */
+  /* PROJECT SECTION FIX: Horizontal Scroll */
   .project {
     display: flex;
-    flex-wrap: nowrap; /* CRITICAL: Prevents stacking vertically */
-    overflow-x: auto; /* CRITICAL: Enables horizontal scrolling */
+    flex-wrap: nowrap; 
+    overflow-x: auto; 
     scroll-snap-type: x mandatory; 
     justify-content: flex-start; 
     padding-bottom: 20px;
   }
 
   .p1 {
-    /* Set fixed width for horizontal scrolling */
-    min-width: 80%; /* Takes up most of the screen width */
+    min-width: 80%; 
     max-width: 80%;
-    flex-shrink: 0; /* Prevents cards from shrinking */
-    margin-right: 15px; /* Spacing between cards */
+    flex-shrink: 0; 
+    margin-right: 15px; 
   }
 
-  /* CONTACT SECTION */
-  .contacts, .details {
+  /* 2. CONTACT/FOOTER FIXES: Align left */
+  .contacts {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start; /* Align form/details container to the left */
+    width: 100%;
   }
 
   .send {
     max-width: 100%; 
     width: 100%;
   }
+
+  .details {
+    /* Target for Quick Links/Services container */
+    flex-direction: column;
+    align-items: flex-start; /* CRITICAL: Aligns children to the left */
+    padding: 20px; 
+    width: 100%; 
+  }
+  
+  /* Ensure text within Quick Links/Services is left-aligned */
+  .details div {
+      width: 100%; 
+  }
+  
+  .details h1, .details li {
+      text-align: left;
+  }
 }
 
 @media (max-width: 480px) {
-  /* NAVIGATION BAR (If you want to hide the menu completely on very small screens) */
-  /* nav .menu { display: none; } */
-
   .name {
     font-size: 1.6rem;
   }
@@ -422,7 +435,6 @@ nav {
     font-size: 1.5rem;
   }
   
-  /* Project Card width on smallest screens */
   .project .p1 {
     min-width: 90%; 
     max-width: 90%;
